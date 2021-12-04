@@ -1,0 +1,1 @@
+El contenido de este archivo va a ser copiado en el archivo destino.
