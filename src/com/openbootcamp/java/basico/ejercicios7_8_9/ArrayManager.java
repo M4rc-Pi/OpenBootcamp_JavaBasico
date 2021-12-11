@@ -15,25 +15,25 @@ public class ArrayManager {
         for (int i = (texto.length()-1); i >= 0; i--) {
             textoInverso += texto.charAt(i);
         }
-        return "1. String inversa:\n"+"\t"+texto+" -> "+textoInverso+"\n";
+        return texto+" -> "+textoInverso;
     }
 
     public String imprimirArrayString(String[] arrayTexto) {
         String resultado = "";
         for (String string: arrayTexto) {
-            resultado += "\t- "+string+"\n";
+            resultado += "<br/>"+"- "+string;
         }
-        return "2. Imprimir valores de un Array de Strings:\n"+resultado;
+        return resultado;
     }
 
     public String imprimirArrayBidimensional (int[][] arrayBidimensional) {
         String resultado = "";
         for (int i = 0; i < arrayBidimensional.length; i++) {
             for (int j = 0; j < arrayBidimensional[i].length; j++) {
-                resultado += "\t Posición: ["+i+","+j+"] - Valor: "+arrayBidimensional[i][j]+"\n";
+                resultado += "<br/>"+"Posición: ["+i+","+j+"] - Valor: "+arrayBidimensional[i][j];
             }
         }
-        return "3. Imprimir posición y valores de un Array Bidimesnional:\n"+resultado;
+        return resultado;
     }
 
     public String añadirElementosVector(String[] elementosVector) {
@@ -44,14 +44,12 @@ public class ArrayManager {
         Vector<String>vectorRemovido = (Vector<String>) vector.clone();
         vectorRemovido.removeElementAt(1);
         vectorRemovido.removeElementAt(1);
-        return "4. Añadir 5 elementos a un vector y eliminar el 2do y 3er elemento:\n"
-                +"\tVector completo: "+vector+"\n"
-                +"\tVector removido: "+vectorRemovido;
+        return "Vector completo: "+vector+"<br/>"
+                +"Vector removido: "+vectorRemovido;
     }
 
     public String imprimirArrayListLinkedList(List<String> arrayList) {
         List<String> linkedList = new LinkedList<>(arrayList);
-        String respuesta = "6. Recorrer y imprimir elementos del mismo ArrayList/LinkedList:\n";
         String resArrayList = "";
         String resLinkedList = "";
 
@@ -61,9 +59,8 @@ public class ArrayManager {
         for (String elemento : linkedList) {
             resLinkedList += elemento+"-";
         }
-        return respuesta
-                +"\t - ArrayList: "+resArrayList+"\n"
-                +"\t - LinkedList: "+resLinkedList+"\n";
+        return "<br/>"+" - ArrayList: "+resArrayList+"<br/>"
+                +" - LinkedList: "+resLinkedList;
     }
 
     public String imprimirArrayListNumerosImpares() {
@@ -73,7 +70,6 @@ public class ArrayManager {
                 arrayListNumeros.add(i);
             }
         }
-        return "7. Imprimir ArrayList numeros del 1-10 y eliminar números pares:\n"
-                +"\t"+arrayListNumeros+"\n";
+        return arrayListNumeros.toString();
     }
 }
